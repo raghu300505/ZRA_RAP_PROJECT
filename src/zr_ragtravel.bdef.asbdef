@@ -1,0 +1,70 @@
+managed implementation in class ZBP_R_RAGTRAVEL unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_RAGTRAVEL alias ZrRagtravel
+persistent table ZRAGTRAVEL
+extensible
+draft table ZRAGTRAVEL_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   TravelID,
+   BookingAmount,
+   Currency;
+
+  field ( readonly )
+   ApprovalStatus,
+   Approver,
+   Duration,
+   Status,
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+    field ( readonly : update ) TravelID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+  action approveTravel;
+  action rejectTravel;
+  determination setInitialStatus on modify {create;}
+  determination calculateDuration on save { create; update; }
+  determination setApprovalStatus on save { create; update; }
+  validation validateDates on save {create;update;}
+  validation validateAmount on save { create; update; }
+  mapping for ZRAGTRAVEL corresponding extensible
+  {
+    TravelID = TRAVEL_ID;
+    CustomerID = CUSTOMER_ID;
+    BookingAmount = BOOKING_AMOUNT;
+    Currency = CURRENCY;
+    TravelType = TRAVEL_TYPE;
+    ApprovalStatus = APPROVAL_STATUS;
+    Approver = APPROVER;
+    TravelPurpose = TRAVEL_PURPOSE;
+    Comments = COMMENTS;
+    Duration = DURATION;
+    Status = STATUS;
+    StartDate = START_DATE;
+    EndDate = END_DATE;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}
