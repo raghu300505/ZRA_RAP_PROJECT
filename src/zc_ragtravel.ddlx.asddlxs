@@ -1,0 +1,236 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'TravelID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'TravelID'
+annotate view ZC_RAGTRAVEL with
+{
+  @UI.lineItem: [
+    { type: #FOR_ACTION, dataAction: 'approveTravel', label: 'Approve' },
+    { type: #FOR_ACTION, dataAction: 'rejectTravel',  label: 'Reject' }
+  ]
+  
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  TravelID;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  CustomerID;
+  
+  @EndUserText.label: 'BookingAmount'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'BookingAmount'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'BookingAmount'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  BookingAmount;
+  
+  @EndUserText.label: 'TravelType'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'TravelType'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'TravelType'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  TravelType;
+  
+  @EndUserText.label: 'ApprovalStatus'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'ApprovalStatus'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'ApprovalStatus'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  ApprovalStatus;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Approver;
+  
+  @EndUserText.label: 'TravelPurpose'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'TravelPurpose'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'TravelPurpose'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  TravelPurpose;
+  
+  @EndUserText.label: 'Comments'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Comments'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Comments'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Comments;
+  
+  @EndUserText.label: 'Duration'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Duration'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Duration'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  Duration;
+  
+  @EndUserText.label: 'Status'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Status'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Status'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  Status;
+  
+  @EndUserText.label: 'StartDate'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'StartDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'StartDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  StartDate;
+  
+  @EndUserText.label: 'EndDate'
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'EndDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'EndDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  EndDate;
+  
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  LocalCreatedBy;
+  
+  @UI.identification: [ {
+    position: 140 
+  } ]
+  @UI.lineItem: [ {
+    position: 140 
+  } ]
+  @UI.selectionField: [ {
+    position: 140 
+  } ]
+  LocalCreatedAt;
+  
+  @UI.identification: [ {
+    position: 150 
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  @UI.selectionField: [ {
+    position: 150 
+  } ]
+  LocalLastChangedBy;
+  
+  @UI.identification: [ {
+    position: 160 
+  } ]
+  @UI.lineItem: [ {
+    position: 160 
+  } ]
+  @UI.selectionField: [ {
+    position: 160 
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.identification: [ {
+    position: 170 
+  } ]
+  @UI.lineItem: [ {
+    position: 170 
+  } ]
+  @UI.selectionField: [ {
+    position: 170 
+  } ]
+  LastChangedAt;
+  
+
+  
+}
