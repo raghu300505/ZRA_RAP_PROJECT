@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_RAGTRAVEL'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_RAGTRAVEL'
+  }
+}
+define service ZUI_RAGTRAVEL_O4 provider contracts odata_v4_ui {
+  expose ZC_RAGTRAVEL;
+}
